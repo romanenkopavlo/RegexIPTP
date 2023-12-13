@@ -8,8 +8,27 @@ public class Main {
 
         assert myIP != null;
 
-        if (classeIPv4.adressePriveeClasse(myIP)) {
-            System.out.print("Private adresse");
+        if (classeIPv4.classA(myIP)) {
+            System.out.println("Classe A");
+            if (classeIPv4.adressePriveeClasse(myIP)) {
+                System.out.print("Private adresse");
+            }
+        } else if (classeIPv4.classB(myIP)) {
+            System.out.println("Classe B");
+            if (classeIPv4.adressePriveeClasse(myIP)) {
+                System.out.print("Private adresse");
+            }
+        } else if (classeIPv4.classC(myIP)) {
+            System.out.println("Classe C");
+            if (classeIPv4.adressePriveeClasse(myIP)) {
+                System.out.println("Private adresse");
+            }
+        } else if (classeIPv4.loopback(myIP)) {
+            System.out.println("Classe A");
+            System.out.print("Loopback");
+        } else if (classeIPv4.loopback(myIP)) {
+            System.out.println("Classe A");
+            System.out.print("Route par defaut");
         }
     }
 }
